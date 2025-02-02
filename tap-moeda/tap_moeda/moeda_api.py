@@ -7,9 +7,11 @@ from tap_moeda.endpoints.endpoint import Endpoint
 
 
 class Currency(Endpoint):
+    # Construtor da classe
     def __init__(self, config: Dict) -> None:
         self.config = config
 
+    # É quem vai fazer a conexão checando o catalog.
     def sync(self, stream: str) -> List:
         if stream == "last":
             data = Last(self.config).sync(stream)
