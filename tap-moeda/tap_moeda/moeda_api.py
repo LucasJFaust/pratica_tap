@@ -6,7 +6,7 @@ from tap_moeda.endpoints.daily import Daily
 from tap_moeda.endpoints.endpoint import Endpoint
 
 
-class Currency(Endpoint):
+class CurrencyAPI(Endpoint):
     # Construtor da classe
     def __init__(self, config: Dict) -> None:
         self.config = config
