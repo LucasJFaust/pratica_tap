@@ -35,7 +35,7 @@ class Endpoint(ABC):
         session: requests.Session
     ) -> requests.Response:
 
-        response = self.mount_retry_session(session=session).get(
+        response = self.mount_session(session=session).get(
             endpoint_url,
             header=self.header,
             auth=None,
