@@ -5,9 +5,10 @@ import singer
 from singer import utils, metadata
 from singer.catalog import Catalog, CatalogEntry
 from singer.schema import Schema
+from tap_moeda.endpoints.endpoint import Endpoint
 
 
-REQUIRED_CONFIG_KEYS = ["start_date", "username", "password"]
+REQUIRED_CONFIG_KEYS = ["currency", "start_date", "end_date"]
 LOGGER = singer.get_logger()
 
 
